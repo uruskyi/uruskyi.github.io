@@ -10,17 +10,17 @@ var gulp = require('gulp'),
             .pipe(browserSync.reload({stream: true}))
     });
 
-    gulp.task('browser-sync', function() {	// Створюємо таск browser-sync
-        browserSync({						// Виконуємо browser Sync
-            server: {						// Визначаємо параметри сервера
-                baseDir: 'app'				// Директорія для сервера - app
+    gulp.task('browser-sync', function() {
+        browserSync({
+            server: {
+                baseDir: 'app'
             },
-            notify: false					// Відключаємо повідомлення зовнішнього ресурсу
+            notify: false
         });
     });
 
     gulp.task('watch', ['browser-sync', 'less'], function() {
-        gulp.watch('app/less/**/*.less', ['less']);			// Нагляд за less файлами у папці less
-        gulp.watch('app/*.html', browserSync.reload);		// Нагляд за HTML файлами у корені проекта
-        gulp.watch('app/js/**/*.js', browserSync.reload);	// Нагляд за JS файлами у папці js
+        gulp.watch('app/less/**/*.less', ['less']);
+        gulp.watch('app/*.html', browserSync.reload);
+        gulp.watch('app/js/**/*.js', browserSync.reload);
     });
