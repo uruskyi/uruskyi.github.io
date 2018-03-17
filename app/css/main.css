@@ -54,12 +54,12 @@ div {
   margin: 0px;
   padding-top: 10px;
 }
-.main-menu li {
+.main-menu ul li {
   justify-content: center;
   margin-left: 56px;
   text-transform: uppercase;
 }
-.main-menu a:hover {
+.main-menu ul li a:hover {
   color: #fce38a;
   border-bottom: 2px solid #fce38a;
   padding-bottom: 12px;
